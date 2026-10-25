@@ -116,7 +116,8 @@ def main():
     pdf = download_pdf(FILE_ID)
     print(f"[OK] Downloaded PDF ({len(pdf):,} bytes)")
 
-    filename = f"resume_{datetime.now().strftime('%d_%b_%Y_%I_%M_%S_%p').lower()}.pdf"
+    # filename = f"resume_{datetime.now(ZoneInfo('Asia/Kolkata')).strftime('%d_%b_%Y_%I_%M_%S_%p').lower()}.pdf"
+    filename = "Saurav_Lokhande_Resume.pdf"
     file_key = upload_file(pdf, filename, FORM_KEY)
     print(f"[OK] Uploaded: {filename}")
 
